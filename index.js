@@ -36,3 +36,19 @@ class Telephone {
     });
   }
 }
+
+class PhoneNumberObserver {
+  constructor() {}
+
+  notify(phoneNumber) {
+    console.log(`Phone number dialed: ${phoneNumber}`);
+  }
+}
+
+class SpecialPhoneNumberObserver {
+  constructor() {}
+
+  notify(phoneNumber) {
+    console.log(`Now Dialing ${phoneNumber}`);
+  }
+}
