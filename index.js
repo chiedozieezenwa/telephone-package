@@ -52,3 +52,22 @@ class SpecialPhoneNumberObserver {
     console.log(`Now Dialing ${phoneNumber}`);
   }
 }
+
+const telephone = new Telephone();
+
+const observer1 = new PhoneNumberObserver();
+const observer2 = new SpecialPhoneNumberObserver();
+
+telephone.addObserver(observer1);
+telephone.addObserver(observer2);
+
+telephone.addPhoneNumber("1234567890");
+telephone.addPhoneNumber("2347023232");
+
+telephone.dialPhoneNumber("1234567890");
+telephone.dialPhoneNumber("2347023232");
+telephone.dialPhoneNumber("9999999999");
+
+telephone.removeObserver(observer2);
+
+telephone.dialPhoneNumber("2347023232");
